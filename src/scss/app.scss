@@ -1,0 +1,12 @@
+@import "reset";
+@import "settings/colors";
+@import "settings/fonts";
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  li {
+    margin: 30px;
+  }
+}
