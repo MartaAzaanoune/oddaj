@@ -1,0 +1,12 @@
+.container__who {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+}

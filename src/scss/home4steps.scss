@@ -1,5 +1,25 @@
+@import "settings/mixin";
+
+.container__main__choice {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .one_step {
+    margin: 20px;
+  }
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  button {
+    @include button;
+  }
+}
 .steps {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px;
 }

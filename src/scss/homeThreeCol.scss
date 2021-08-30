@@ -1,5 +1,14 @@
-.three_col {
+@import "settings/mixin";
+@import "settings/colors";
+
+.columns {
+  @include columns;
+}
+.container__three_columns {
+  background:$third-color;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
   display: flex;
   justify-content: center;
-  align-items: center;
 }

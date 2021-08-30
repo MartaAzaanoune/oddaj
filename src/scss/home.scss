@@ -1,0 +1,15 @@
+ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  li {
+    margin: 30px;
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+    }
+
+  }
+}

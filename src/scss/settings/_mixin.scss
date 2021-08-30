@@ -1,0 +1,19 @@
+
+@import "colors";
+@import "fonts";
+
+@mixin button {
+  width: 150px;
+  height: 150px;
+  text-transform: uppercase;
+  background:$base-color;
+  border:$fourth-color 3px solid;
+  font-size: 20px;
+}
+@mixin columns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}

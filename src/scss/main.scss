@@ -4,7 +4,15 @@
 @import "app";
 @import "home4steps";
 @import "homeThreeCol";
+@import "organizations";
 
 body {
   font-family:$font-base;
+  display: flex;
+  .container {
+    width: 1024px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
 }
