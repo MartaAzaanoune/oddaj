@@ -1,0 +1,50 @@
+{
+  "fundation": [
+    { "name": "Fundacja słonce",
+      "description": "jakaś organizacja",
+      "id": 1},
+    { "name": "Fundacja księzyc",
+      "description": "jakaś organizacja",
+      "id": 2},
+    { "name": "Fundacja gwiazdy",
+      "description": "jakaś organizacja",
+      "id": 3},
+    { "name": "Fundacja niebo",
+      "description": "jakaś organizacja",
+      "id": 4},
+    { "name": "Fundacja planeta",
+      "description": "jakaś organizacja",
+      "id": 5},
+    { "name": "Fundacja galaktyka",
+      "description": "jakaś organizacja",
+      "id": 6}
+  ],
+  "organization": [
+    { "name": "Organizacja1",
+      "description": "jakaś organizacja",
+      "id": 7},
+    { "name": "Organizacja2",
+      "description": "jakaś organizacja",
+      "id": 8},
+    { "name": "Organizacja3",
+      "description": "jakaś organizacja",
+      "id": 9},
+    { "name": "Organizacja4",
+      "description": "jakaś organizacja",
+      "id": 10},
+    { "name": "Organizacja5",
+      "description": "jakaś organizacja",
+      "id": 11},
+    { "name": "Organizacja6",
+      "description": "jakaś organizacja",
+      "id": 12}
+  ],
+  "local": [
+    { "name": "zbiórka1",
+    "description": "jakaś zbiórka"},
+    { "name": "zbiórka2",
+      "description": "jakaś zbiórka"},
+    { "name": "zbiórka3",
+      "description": "jakaś zbiórka"}
+  ]
+}

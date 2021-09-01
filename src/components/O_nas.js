@@ -2,7 +2,7 @@ import React from "react";
 export default function Onas() {
     return (
         <div className="container__main">
-            <div className="columns">
+            <div className="columns" id="o_nas">
                 <h1>O nas</h1>
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit,

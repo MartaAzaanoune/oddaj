@@ -1,46 +1,134 @@
 import React from "react";
+const data = {
+    "fundation": [
+      { "name": "Fundacja słonce",
+        "description": "jakaś organizacja",
+        "id": 1},
+      { "name": "Fundacja księzyc",
+        "description": "jakaś organizacja",
+        "id": 2},
+      { "name": "Fundacja gwiazdy",
+        "description": "jakaś organizacja",
+        "id": 3},
+      { "name": "Fundacja niebo",
+        "description": "jakaś organizacja",
+        "id": 4},
+      { "name": "Fundacja planeta",
+        "description": "jakaś organizacja",
+        "id": 5},
+      { "name": "Fundacja galaktyka",
+        "description": "jakaś organizacja",
+        "id": 6}
+    ],
+    "organization": [
+      { "name": "Organizacja1",
+        "description": "jakaś organizacja",
+        "id": 7},
+      { "name": "Organizacja2",
+        "description": "jakaś organizacja",
+        "id": 8},
+      { "name": "Organizacja3",
+        "description": "jakaś organizacja",
+        "id": 9},
+      { "name": "Organizacja4",
+        "description": "jakaś organizacja",
+        "id": 10},
+      { "name": "Organizacja5",
+        "description": "jakaś organizacja",
+        "id": 11},
+      { "name": "Organizacja6",
+        "description": "jakaś organizacja",
+        "id": 12}
+    ],
+    "local": [
+      { "name": "zbiórka1",
+      "description": "jakaś zbiórka"},
+      { "name": "zbiórka2",
+        "description": "jakaś zbiórka"},
+      { "name": "zbiórka3",
+        "description": "jakaś zbiórka"}
+    ]
+  }
 
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
-import Fundacje from "./HomeWhoFundations";
-import Organizacje from "./HomeWhoOrganizations";
-import Lokalne from "./HomeWhoLocal";
+export default class WhoWeHelp extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            items: [],
+            currentPage: 1,
+            todosPerPage: 3,
+            selected: 'fundation'
+        };
+        this.handleClick = this.handleClick.bind(this);
+    }
 
-export default function Who() {
-    return (
-        <div className="container__who">
-            <div className="columns">
-            <h2>Komu pomagamy</h2>
-            <img/>
-            <Router>
-            <ul>
-                <li>
-                    <Link to="/fundations">Fundacjom</Link>
+    handleClick(event) {
+        this.setState({
+            currentPage: Number(event.target.id)
+        });
+    }
+
+    componentDidMount() {
+       /* fetch('http://localhost:3000')
+            .then(res => res.json())
+            .then(items => {
+                this.setState({
+                    items
+                })
+            })*/
+            this.setState({
+                items: data
+            })
+    }
+
+
+    render() {
+        const { items, selected, currentPage, fundationsPerPage } = this.state;
+
+        // Logic for displaying current todos
+        const indexOfLastFundation = currentPage * fundationsPerPage;
+        const indexOfFirstFundation = indexOfLastFundation - fundationsPerPage;
+        const currentFundations = items[selected].slice(indexOfFirstFundation, indexOfLastFundation);
+
+        const renderItems = currentFundations.map((fundation, index) => {
+            return <li key={index}>{fundation}</li>;
+        });
+
+        // Logic for displaying page numbers
+        const pageNumbers = [];
+        for (let i = 1; i <= Math.ceil(items[selected].length / fundationsPerPage); i++) {
+            pageNumbers.push(i);
+        }
+
+        const renderPageNumbers = pageNumbers.map(number => {
+            return (
+                <li
+                    key={number}
+                    id={number}
+                    onClick={this.handleClick}
+                >
+                    {number}
                 </li>
-                <li>
-                    <Link to="/organizations">Organizacjom pozarządowym</Link>
-                </li>
-                <li>
-                    <Link to="/local">Lokalnym zbiórkom</Link>
-                </li>
-            </ul>
-                <Switch>
-                    <Route exact path="/fundations">
-                        <Fundacje/>
-                    </Route>
-                    <Route path="/organizations">
-                        <Organizacje/>
-                    </Route>
-                    <Route path="/local">
-                        <Lokalne/>
-                    </Route>
-                </Switch>
-            </Router>
+            );
+        });
+
+        return (
+            <div>
+                <button></button>
+                <button></button>
+                <button></button>
+                <ul>
+                    {renderItems.map(({name, description , id}) => {
+                        return <div>{name}</div>
+                    })}
+                </ul>
+                <ul id="page-numbers">
+                    {renderPageNumbers}
+                </ul>
             </div>
-        </div>
-    )
+        );
+    }
 }
+
+
+

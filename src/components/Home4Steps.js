@@ -3,8 +3,8 @@ import React from "react";
 export default function Home4Steps() {
     return (
         <div className="container">
-            <div className="container__main__choice">
-             <h1 className="container__main__choice">Wystarczą 4 proste kroki</h1>
+            <div className="container__main__choice" id="4steps">
+             <h1 className="container__main__choice" >Wystarczą 4 proste kroki</h1>
                 <div className="steps">
                     <div className="one_step">
                         <img className="steps"/>
