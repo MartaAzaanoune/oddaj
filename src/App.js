@@ -31,13 +31,13 @@ export default function App() {
                       <Helper activeClass="active" to="4steps" className="navigation__menu_b">O co chodzi?</Helper>
                   </li>
                   <li className="navigation__menu_b">
-                      <Helper to="o_nas" className="navigation__menu_b">O nas</Helper>
+                      <Helper to="o_nas" duration={1500} className="navigation__menu_b">O nas</Helper>
                   </li>
                   <li className="navigation__menu_b">
-                      <Helper to="fundacje_i_organizacje" className="navigation__menu_b">Fundacja i organizacje</Helper>
+                      <Helper to="fundacje_i_organizacje" duration={1500} className="navigation__menu_b">Fundacja i organizacje</Helper>
                   </li>
                   <li className="navigation__menu_b">
-                      <Helper to="pomidor" duration={1500} smooth className="navigation__menu_b">Kontakt</Helper>
+                      <Helper to="contact" duration={1500} smooth className="navigation__menu_b">Kontakt</Helper>
                   </li>
               </ul>
           </div>

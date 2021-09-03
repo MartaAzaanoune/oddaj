@@ -54,9 +54,9 @@ export default class WhoWeHelp extends React.Component {
     constructor() {
         super();
         this.state = {
-            items: [],
+            items:data,
             currentPage: 1,
-            todosPerPage: 3,
+            itemsPerPage: 3,
             selected: 'fundation'
         };
         this.handleClick = this.handleClick.bind(this);
@@ -83,20 +83,20 @@ export default class WhoWeHelp extends React.Component {
 
 
     render() {
-        const { items, selected, currentPage, fundationsPerPage } = this.state;
+        const { items, selected, currentPage, itemsPerPage } = this.state;
 
         // Logic for displaying current todos
-        const indexOfLastFundation = currentPage * fundationsPerPage;
-        const indexOfFirstFundation = indexOfLastFundation - fundationsPerPage;
+        const indexOfLastFundation = currentPage * itemsPerPage;
+        const indexOfFirstFundation = indexOfLastFundation - itemsPerPage;
         const currentFundations = items[selected].slice(indexOfFirstFundation, indexOfLastFundation);
-
-        const renderItems = currentFundations.map((fundation, index) => {
-            return <li key={index}>{fundation}</li>;
+        const renderItems = currentFundations.map((item, index) => {
+          console.log(item);
+            return <li key={index}>{item.name}</li>;
         });
 
         // Logic for displaying page numbers
         const pageNumbers = [];
-        for (let i = 1; i <= Math.ceil(items[selected].length / fundationsPerPage); i++) {
+        for (let i = 1; i <= Math.ceil(items[selected].length / itemsPerPage); i++) {
             pageNumbers.push(i);
         }
 
@@ -114,13 +114,11 @@ export default class WhoWeHelp extends React.Component {
 
         return (
             <div>
-                <button></button>
-                <button></button>
-                <button></button>
+                <button>f</button>
+                <button>o</button>
+                <button>l</button>
                 <ul>
-                    {renderItems.map(({name, description , id}) => {
-                        return <div>{name}</div>
-                    })}
+                    {renderItems}
                 </ul>
                 <ul id="page-numbers">
                     {renderPageNumbers}
@@ -129,6 +127,5 @@ export default class WhoWeHelp extends React.Component {
         );
     }
 }
-
 
 
