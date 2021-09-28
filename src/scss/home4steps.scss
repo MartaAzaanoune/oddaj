@@ -6,6 +6,10 @@
   flex-direction: column;
   .one_step {
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
   }
   h1 {
     display: flex;
@@ -13,6 +17,36 @@
     align-items: center;
     margin: 10px;
   }
+  h1::after {
+    content:url(../assets/Decoration.svg);
+    width: auto;
+    height: 10px;
+    display: inline-block;
+  }
+  p.one_step_1:first-of-type::before {
+    content:url(../assets/Icon-1.svg);
+    width: auto;
+    height: 10px;
+  } 
+  p.one_step_2:first-of-type::before {
+    content:url(../assets/Icon-2.svg);
+    width: auto;
+    height: 10px;
+  } 
+  p.one_step_3:first-of-type::before {
+    content:url(../assets/Icon-3.svg);
+    width: auto;
+    height: 10px;
+  } 
+  p.one_step_4:first-of-type::before {
+    content:url(../assets/Icon-4.svg);
+    width: auto;
+    height: 10px;
+  }
+  p {
+    display: flex;
+    flex-direction: column;
+  } 
   button {
     @include button;
   }

@@ -7,33 +7,29 @@ export default function Home4Steps() {
              <h1 className="container__main__choice" >Wystarczą 4 proste kroki</h1>
                 <div className="steps">
                     <div className="one_step">
-                        <img className="steps" alt="graphics"/>
-                        <p>Wybierz rzeczy</p>
-                        <p>ubrania, zabawki,<br/>
+                        <p className="one_step_1">Wybierz rzeczy</p>
+                        <p className="one_step_1">ubrania, zabawki,<br/>
                         sprzęt i inne</p>
                     </div>
                     <div className="one_step">
-                     <img className="steps" alt="graphics"/>
-                        <p>Spakuj je</p>
-                        <p>ubrania, zabawki,<br/>
+                        <p className="one_step_2">Spakuj je</p>
+                        <p className="one_step_2">ubrania, zabawki,<br/>
                         sprzęt i inne</p>
                     </div>
                     <div className="one_step">
-                        <img className="steps" alt="graphics"/>
-                        <p>Wybierz komu<br/>
+                        <p className="one_step_3">Wybierz komu<br/>
                         chcesz pomóc</p>
-                        <p>ubrania, zabawki,<br/>
+                        <p className="one_step_3">ubrania, zabawki,<br/>
                         sprzęt i inne</p>
                     </div>
                     <div className="one_step">
-                        <img className="steps" alt="graphics"/>
-                        <p>Zamów kuriera</p>
-                        <p>ubrania, zabawki,<br/>
+                        <p className="one_step_4">Zamów kuriera</p>
+                        <p className="one_step_1">ubrania, zabawki,<br/>
                         sprzęt i inne</p>
                     </div>
                 </div>
                 <div className="steps">
-                    <button>Oddaj rzeczy</button>
+                    <button className="steps">Oddaj rzeczy</button>
                 </div>
             </div>
         </div>

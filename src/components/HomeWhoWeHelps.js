@@ -114,9 +114,9 @@ export default class WhoWeHelp extends React.Component {
 
         return (
             <div>
-                <button>f</button>
-                <button>o</button>
-                <button>l</button>
+                <button>Fundacje</button>
+                <button>Organizacje</button>
+                <button>Lokalne</button>
                 <ul>
                     {renderItems}
                 </ul>

@@ -14,19 +14,20 @@ import Zarejestruj from "./Zarejestruj";
 export default function Home() {
     return (
         <>
-            <div className="container__main__choice">
-                <div className="columns">
-                    <h1>Zacznij pomagać!   </h1>
-                    <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
-                    <div className="steps">
-                        <button>
-                            <Link to="/zaloguj">Oddaj rzeczy</Link>
-                        </button>
-                        <button>
-                            <Link to="/zaloguj">Zorganizuj zbiórkę</Link>
-                        </button>
+                <div className="container__main__choice">
+                    <div className="columns">
+                        <h1 className="container__main__choice">Zacznij pomagać!<br/>
+                        Oddaj niechciane rzeczy w zaufane ręce<br/></h1>
+                        <div className="steps">
+                            <button>
+                                <Link to="/zaloguj">Oddaj rzeczy</Link>
+                            </button>
+                            <button>
+                                <Link to="/zaloguj">Zorganizuj zbiórkę</Link>
+                            </button>
+                        </div>
                     </div>
-                </div>
+            
             </div>
             <HomeThreeCol/>
             <Home4Steps/>
