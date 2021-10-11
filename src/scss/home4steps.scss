@@ -1,9 +1,12 @@
 @import "settings/mixin";
+@import "settings/colors";
 
-.container__main__choice {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.container__4steps {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+  
   .one_step {
     margin: 20px;
     display: flex;
@@ -11,8 +14,9 @@
     justify-content: center;
 
   }
-  h1 {
+  h1.title {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 10px;
@@ -26,22 +30,22 @@
   p.one_step_1:first-of-type::before {
     content:url(../assets/Icon-1.svg);
     width: auto;
-    height: 10px;
   } 
+  p.one_step_1:first-of-type, p.one_step_2:first-of-type, p.one_step_3:first-of-type, p.one_step_4:first-of-type {
+    border-bottom: black 1px solid;
+  }
+
   p.one_step_2:first-of-type::before {
     content:url(../assets/Icon-2.svg);
     width: auto;
-    height: 10px;
   } 
   p.one_step_3:first-of-type::before {
     content:url(../assets/Icon-3.svg);
     width: auto;
-    height: 10px;
   } 
   p.one_step_4:first-of-type::before {
     content:url(../assets/Icon-4.svg);
     width: auto;
-    height: 10px;
   }
   p {
     display: flex;
@@ -50,10 +54,18 @@
   button {
     @include button;
   }
-}
+  .steps__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .steps {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  background:$base-color;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
 }

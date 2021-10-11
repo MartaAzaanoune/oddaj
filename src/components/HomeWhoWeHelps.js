@@ -113,7 +113,7 @@ export default class WhoWeHelp extends React.Component {
         });
 
         return (
-            <div>
+            <div className="container">
                 <button>Fundacje</button>
                 <button>Organizacje</button>
                 <button>Lokalne</button>

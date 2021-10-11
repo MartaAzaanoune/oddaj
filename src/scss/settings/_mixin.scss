@@ -4,11 +4,12 @@
 
 @mixin button {
   width: 150px;
-  height: 150px;
+  height: 80px;
   text-transform: uppercase;
   background:$base-color;
   border:$fourth-color 3px solid;
   font-size: 20px;
+  padding: 5px;
 }
 @mixin columns {
   display: flex;

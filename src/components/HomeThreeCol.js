@@ -2,6 +2,8 @@ import React from "react";
 
 export default function HomeThreeCol() {
     return (
+        <div className="container">
+
         <div className="container__three_columns">
             <div className="columns">
                 <h3>10</h3>
@@ -24,6 +26,7 @@ export default function HomeThreeCol() {
                     Tralilalila la, tralilalilan<br/>
                     Tralilalila la, tralilalilan</p>
             </div>
+        </div>
         </div>
     )
 }
