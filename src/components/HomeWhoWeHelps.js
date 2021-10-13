@@ -114,15 +114,22 @@ export default class WhoWeHelp extends React.Component {
 
         return (
             <div className="container">
-                <button>Fundacje</button>
-                <button>Organizacje</button>
-                <button>Lokalne</button>
+              <div className="container_who_we_help">
+                <h1 className="container_who_we_help_title">Komu pomagamy?</h1>
+                <button className="container_who_we_help_button">Fundacje</button>
+                <button className="container_who_we_help_button">Organizacje</button>
+                <button className="container_who_we_help_button">Lokalne</button>
+                <p className="container_who_we_help-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat.</p>
                 <ul>
                     {renderItems}
                 </ul>
                 <ul id="page-numbers">
                     {renderPageNumbers}
                 </ul>
+              </div>  
             </div>
         );
     }

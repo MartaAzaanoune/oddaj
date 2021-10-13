@@ -1,0 +1,22 @@
+@import "settings/colors";
+@import "settings/mixin";
+.container__contact {
+    background-image:url("../assets/Form-Hero-Image.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.container__contact__title {
+    display: flex;
+    flex-direction: column;
+    margin:20px;
+}
+.container__contact__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.container__contact__form__first_line {
+    display: flex;
+    flex-direction: row;
+}
